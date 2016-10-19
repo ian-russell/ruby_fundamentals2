@@ -27,3 +27,23 @@ else
 end
 
 #displaying the 2nd item in the list
+puts grocery_list[1]
+
+#Sorting everything alpabetically
+
+def grocery(item)
+  item.sort.each do |list|
+    puts "*" + "#{list}"
+  end
+end
+grocery(grocery_list)
+
+#Removing Salmon from list
+
+if grocery_list.include?("salmon") == true
+  puts "Can't find the salmon, not getting it today."
+  grocery_list.delete("salmon")
+  puts grocery(grocery_list)
+else
+  puts "looks like I'm all done!"
+end
