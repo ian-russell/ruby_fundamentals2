@@ -29,3 +29,20 @@ students.each do |k, v|
   value_new = (v * 1.05).to_i
     puts "#{k} : #{value_new}"
 end
+
+#delete 2nd cohort and display results
+students.delete(:cohort2)
+def bitmaker_students(hash)
+  hash.each do |k, v|
+  puts "#{k} : #{v}"
+  end
+end
+bitmaker_students(students)
+
+#calculate the total number of students across all cohorts
+
+total_students = 0
+students.each do |k, v|
+  total_students += v
+end
+puts "the total number of students is #{total_students}."
